@@ -91,12 +91,12 @@ export default function Home() {
 
                 <div className="container content">
                     <p className="desktop-only"> Olá </p>
-                    <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
-                    <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape. </p>
+                    <h1>Um sistema novo, feito para empresas que perseguem o sucesso.</h1>
+                    <p>Às vezes a escada para o sucesso começa no computador que está em cima da sua mesa. Às vezes, para solidificá-lo basta utilizar este sistema. </p>
                     <div className="flex gap-1">
                         <span><Button text="Cadastre-se" /></span>
                         <span className="desktop-only">
-                            <Button text="Veja mais" secondary />
+                            <Button text="Explorar" secondary />
                         </span>
                     </div>
                 </div>
@@ -104,13 +104,13 @@ export default function Home() {
 
             <section id="solucao">
                 <div className="container content">
-                    <h1>Soluções baseadas em facilitar a vida de clínicas médicas que lidam com alta demanda</h1>
+                    <h1>Soluções baseadas em facilitar a vida de clínicas médicas que lidam com alta demanda.</h1>
                     <div className="solution-cards flex">
                         <div id="box-solucoes">
                             <h3>Sistema ágil e moderno para sua empresa.</h3>
                         </div>
                         <div id="box-solucoes">
-                            <h3>Sistema atualizado regularmente para evoluir junto de sua empresa</h3>
+                            <h3>Sistema atualizado regularmente para evoluir junto de sua empresa.</h3>
                         </div>
                         <div id="box-solucoes">
                             <h3>Leveza e fluidez para todos os computadores.</h3>
