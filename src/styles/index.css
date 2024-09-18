@@ -1,5 +1,6 @@
-::before,
-::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -9,10 +10,10 @@
     font: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}   
+}
 
 :root {
-    --bg-color: #131212;
+    --bg-color: #f1efef;
     --text-color: #252B42;
     --second-text-color: #737373;
     --light-text-color: #FFF;
@@ -53,7 +54,9 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.2;
     color: var(--text-color);
     font-weight: var(--fw-bold);
@@ -105,5 +108,3 @@ ul {
         --pg-lg: 2rem;
     }
 }
-
-

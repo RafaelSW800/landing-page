@@ -1,20 +1,21 @@
 import { useState } from "react";
 import Button from "../components/Button"
-import "../styles/button.css"
 import Logo from "../assets/logo.svg"
 import Close from "../assets/close.svg"
 import Menu from "../assets/menu.svg"
+import HeroRectangleOne from "../assets/images/HeroRectangleOne.png"
+import HeroRectangleTwo from "../assets/images/HeroRectangleTwo.png"
+import "../styles/button.css"
 import "../styles/header.css";
 import "../styles/utility.css";
-import Retangle from "../assets/images/retangle13.png"
-import Retangle2 from "../assets/images/retangle14.png"
 import "../styles/hero.css"
+import "../styles/solucoes.css"
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     return (
-        <>            
+        <>
             <header className="container py-sm">
                 <nav className="flex items-center justify-between">
                     <img src={Logo} alt="" width={220} height={80} />
@@ -35,13 +36,8 @@ export default function Home() {
                             <li>
                                 <a href="#contact">Contato</a>
                             </li>
-                            <li>
-                                <a className="reverse-color" href="#">
-                                    Login
-                                </a>
-                            </li>
                         </ul>
-                    </div>          
+                    </div>
                     <div className="desktop-only">
                         <div className="flex items-center">
                             <a className="reverse-color ml-lg" href="">Login</a>
@@ -69,6 +65,9 @@ export default function Home() {
                                         <li>
                                             <a href="#contact">Contato</a>
                                         </li>
+                                        <li>
+                                            <a className="reverse-color" href="#">Login</a>
+                                        </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
                                         <img src={Close} alt="ícone fechar menu" width={24} height={24} />
@@ -86,24 +85,47 @@ export default function Home() {
 
             <section id="hero">
                 <span className="desktop-only">
-                    <img src={Retangle} alt="Retangulo um tela inicial" />
+                    <img src={HeroRectangleOne} alt="Retangulo um tela inicial" />
                 </span>
-                <img src={Retangle2} alt="Retangulo dois tela inicial" />
+                <img src={HeroRectangleTwo} alt="Retangulo dois tela inicial" />
 
                 <div className="container content">
-                    <p className="desktop-only">
-                        Olá
-                    </p><h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1><p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.</p><div className="flex gap-1">
+                    <p className="desktop-only"> Olá </p>
+                    <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
+                    <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape. </p>
+                    <div className="flex gap-1">
                         <span><Button text="Cadastre-se" /></span>
                         <span className="desktop-only">
                             <Button text="Veja mais" secondary />
                         </span>
                     </div>
                 </div>
+            </section>
 
+            <section id="solucao">
+                <div className="container content">
+                    <h1>Soluções baseadas em facilitar a vida de clínicas médicas que lidam com alta demanda</h1>
+                    <div className="solution-cards flex">
+                        <div id="box-solucoes">
+                            <h3>Sistema ágil e moderno para sua empresa.</h3>
+                        </div>
+                        <div id="box-solucoes">
+                            <h3>Sistema atualizado regularmente para evoluir junto de sua empresa</h3>
+                        </div>
+                        <div id="box-solucoes">
+                            <h3>Leveza e fluidez para todos os computadores.</h3>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-1 content">
+                        <span className="desktop-only">
+                            <Button text="Veja como funciona" secondary />
+                        </span>
+                    </div>
+                </div>
             </section>
         </>
 
-        
+
     )
 }
