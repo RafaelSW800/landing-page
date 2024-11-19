@@ -3,13 +3,16 @@ import Button from "../components/Button"
 import Logo from "../assets/logo.svg"
 import Close from "../assets/close.svg"
 import Menu from "../assets/menu.svg"
+import Star from "../assets/star.svg"
+import StarOuter from "../assets/starOuter.svg"
 import HeroRectangleOne from "../assets/images/HeroRectangleOne.png"
 import HeroRectangleTwo from "../assets/images/HeroRectangleTwo.png"
+import ProfileImageOne from "../assets/images/profileImageOne.png"
 import "../styles/button.css"
 import "../styles/header.css";
 import "../styles/utility.css";
 import "../styles/hero.css"
-import "../styles/solucoes.css"
+import Champion from "../assets/champion.svg";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -102,30 +105,132 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="solucao">
-                <div className="container content">
-                    <h1>Soluções baseadas em facilitar a vida de clínicas médicas que lidam com alta demanda.</h1>
-                    <div className="solution-cards flex">
-                        <div id="box-solucoes">
-                            <h3>Sistema ágil e moderno para sua empresa.</h3>
-                        </div>
-                        <div id="box-solucoes">
-                            <h3>Sistema atualizado regularmente para evoluir junto de sua empresa.</h3>
-                        </div>
-                        <div id="box-solucoes">
-                            <h3>Leveza e fluidez para todos os computadores.</h3>
-                        </div>
-                    </div>
-
-                    <div className="flex gap-1 content">
+            <section className="container" id="solution">
+                <header>
+                    <span>
+                        <h2>Soluções</h2>
                         <span className="desktop-only">
-                            <Button text="Veja como funciona" secondary />
+                            <h2>
+                                Sob medida para você
+                            </h2>
                         </span>
+                    </span>
+                    <p>
+                        Inovação é com a gente! A <strong>DonaFrost </strong>
+                        já conquistou diversos clientes, seja você mais um deles,
+                        veja tudo que pode ganhar com nossos serviços.
+                    </p>
+                </header>
+            </section>
+
+            <section className="even-columns">
+                <div className="card">
+                    <span>
+                        <img src={Champion} alt="ícone campeão" width={64} height={64} />
+                    </span>
+                    <div>
+                        <h3>
+                            Produto Vencedor
+                        </h3>
+                        <p>
+                            Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                        </p>
+                        <hr />
                     </div>
                 </div>
             </section>
+
+            {/* Parte 4 */}
+
+            <section id="testimonials">
+                <header>
+                    <span>
+                        <p className="desktop-only">
+                            Conselho de quem conhece
+                        </p>
+                        <h2>Cada cliente importa!</h2>
+                    </span>
+                    <p>
+                        Quem já pediu sabe da qualidade das nossas receitas, estamos tirando aquela ideia de que
+                        comida congelada tem de ser algo sem gosto, acompanhe abaixo os testemunhos de quem já comprou e aprovou.
+                    </p>
+                </header>
+            </section>
+
+            <section className="carousel">
+                <div className="carousel-content"></div>
+                <div className="carousel-card">
+                <img src={ProfileImageOne} alt="Imagem perfil cliente" />
+                <span className="testimony">
+                    <p>
+                        Certamente o mercado chinês de eletricos está bombando, só existe
+                        uma coisa melhor do que isso, provar uma boa comida DonaFrost no almoço.
+                    </p>
+                </span>
+                <span className="rating">
+                    <img src={Star} alt="ícone estrela" width={22} height={20} />
+                    <img src={Star} alt="ícone estrela" width={22} height={20} />
+                    <img src={Star} alt="ícone estrela" width={22} height={20} />
+                    <img src={Star} alt="ícone estrela" width={22} height={20} />
+                    <img src={StarOuter} alt="ícone estrela sem fundo" width={20} height={22} />
+                </span>
+                <span className="names">
+                    <p>Ellon Ma</p>
+                    <p>CEO BING CHILLING</p>
+                </span>
+            </div>
+
+            <div className="carousel-content">
+            </div>
+
+                
+
+
+                <footer className="bg-white py-8">
+                <div className="max-w-6xl mx-auto px-4">
+                    <div className="flex justify-between">
+                        <div>
+                        <img src={Logo} alt="" width={220} height={80} />
+                            <div className="flex space-x-4 text-blue-600">
+                                <a href="#"><i className="fab fa-instagram"></i></a>
+                                <a href="#"><i className="fab fa-facebook"></i></a>
+                                <a href="#"><i className="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold mb-4">Empresa</h2>
+                            <ul>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Sobre nós</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Faça parte do time</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold mb-4">Funcionalidades</h2>
+                            <ul>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Marketing</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Análise de dados</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Boot discord</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold mb-4">Recursos</h2>
+                            <ul>
+                                <li className="mb-2"><a href="#" className="text-gray-700">IOS & Android</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Teste a Demo</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">Clientes</a></li>
+                                <li className="mb-2"><a href="#" className="text-gray-700">API</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-gray-100 py-4 mt-8">
+                    <div className="max-w-6xl mx-auto px-4 text-center text-gray-600">
+                        Feito com amor na aula de Programação Web💙©2024 LandingPage - Todos os direitos reservados.
+                    </div>
+                </div>
+            </footer>
+            </section>
         </>
-
-
     )
 }
